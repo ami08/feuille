@@ -1,0 +1,20 @@
+body{
+    background-color: blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+main{
+    display: flex;
+    padding-bottom: 44px;
+    padding-top: 29px;
+    justify-content: center;
+    margin: auto;
+    border-style: solid;
+    border-color: blueviolet;
+    height: 19px;
+    margin-bottom: 80px;
+    position: relative;
+    width: 402px;
+
+}
+

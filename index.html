@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/demo.js"></script>
+    <title>Pierre</title>
+</head>
+<body>
+</br></br></br></br></br>
+    <main class="button">
+        <button>Pierre</button>
+        <button>Feuille</button>
+        <button>Ciseaux</button>
+        <div class="resultat" style="position:relative; top:0px; right:0px">resultat</div>  
+    
+ <script>
+ const buttons = document.querySelectorAll("button");
+
+for(let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function(){
+     const joueur = buttons[i].innerHTML;
+     const robot = buttons[Math.floor(Math.random() * buttons.length)].
+        innerHTML;
+     let resultat = "";
+
+     if (joueur === robot) {
+         resultat = "Egalité";
+     }
+     else if ((joueur === "Pierre" && robot === "Ciseaux") || (joueur === "Feuille" && robot === "Pierre") || (joueur === "Ciseaux" && robot === "Feuille")) {
+         resultat = "Gagné";
+     }
+     else {
+         resultat = "Perdu";
+     }
+
+     document.querySelector(".resultat").innerHTML = `
+       Joueur à choisit : ${joueur} </br>
+       Robot à choisit: ${robot} </br>
+       ${resultat}
+     `;
+    });
+}
+ </script>
+ </main>
+</body>
+</html>
